@@ -4,7 +4,7 @@ import clipboard from 'clipboardy';
 function generateData(inputConfig) {
   const {
     count,
-    meesho_price_start,
+    meesho_price,
     product_mrp_global,
     inventory_global,
     product_id,
@@ -16,7 +16,7 @@ function generateData(inputConfig) {
   } = inputConfig;
 
   let data = {
-    meesho_price: [],
+    meesho_price: meesho_price,
     only_wrong_return_price: [],
     product_mrp: [],
     inventory: [],
@@ -29,15 +29,13 @@ function generateData(inputConfig) {
   };
 
   for (let i = 0; i < count; i++) {
-    let price = meesho_price_start + (i * 10);
-    data.meesho_price.push(price);
-    data.only_wrong_return_price.push(price - 1);
+    data.only_wrong_return_price.push(meesho_price[i] - 1);
     data.product_mrp.push(product_mrp_global);
     data.inventory.push(inventory_global);
     data.supplier_sku_id.push(`${product_id}_${i + 1}`);
     data.top_chest_size.push(top_chest_size_start + (i * 2));
     data.top_length_size.push(top_length_size_start + (i * 2));
-    data.bottom_waist_size.push(bottom_waist_size_start + (i * 2));
+    data.bottom_waist_size.push(bottom_waist_size_start + (i * 1));
     data.bottom_length_size.push(bottom_length_size_start + (i * 2));
   }
 
@@ -47,10 +45,10 @@ function generateData(inputConfig) {
 // ---------- INPUT JSON (only edit this block) ----------
 const inputConfig = {
   count: 16,
-  meesho_price_start: 190,
-  product_mrp_global: 999,
+  meesho_price: [200, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, 360],
+  product_mrp_global: 899,
   inventory_global: 100,
-  product_id: "boy_nice_white_green",
+  product_id: "girl_white_pink_butterfly_c3",
   top_chest_size_start: 16,
   top_length_size_start: 12,
   bottom_waist_size_start: 16,

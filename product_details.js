@@ -53,12 +53,13 @@ function setInputValue(id, value) {
 }
 
 
+
 // ✅ All field values go here
 const fieldValues = {
   // Dropdowns
-  top_color: "Blue",
+  top_color: "White",
   top_fabric: "Cotton Blend",
-  bottom_color: "Red",
+  bottom_color: "Peach",
   bottom_fabric: "Cotton Blend",
   country_of_origin: "India",
 
