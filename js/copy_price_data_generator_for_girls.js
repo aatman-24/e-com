@@ -45,10 +45,10 @@ function generateData(inputConfig) {
 // ---------- INPUT JSON (only edit this block) ----------
 const inputConfig = {
   count: 16,
-  meesho_price: [200, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 325, 330, 335, 340],
-  product_mrp_global: 899,
+  meesho_price: [230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 350, 360, 370, 380, 390],
+  product_mrp_global: 999,
   inventory_global: 100,
-  product_id: "girl_space_time_c4",
+  product_id: "girl_dhingli_pista_c1",
   top_chest_size_start: 19,
   top_length_size_start: 12,
   bottom_waist_size_start: 16,

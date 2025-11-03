@@ -28,6 +28,8 @@ def calculate_effective_cost(product_cost, rto_rate, rto_loss_rate,
         "Base Cost (No Shipping)": round(base_cost, 2),
         "Expected RTO Loss": round(expected_rto_loss, 2),
         "Expected Customer Return Loss": round(expected_customer_loss, 2),
+        "Ads Costing Per Product": round(ads, 2),
+        "GST": round(gst, 2),
         "Effective Cost per Order (No Shipping)": round(effective_cost, 2),
         "Break Even Price (No Shipping)": round(effective_cost, 2)
     }
@@ -37,10 +39,10 @@ result = calculate_effective_cost(
     product_cost=170,
     rto_rate=0.10,
     rto_loss_rate=0.02,
-    customer_return_rate=0.12,
+    customer_return_rate=0.15,
     customer_return_loss=160,
     gst=13,
-    ads=25
+    ads=20
 )
 
 for k, v in result.items():
